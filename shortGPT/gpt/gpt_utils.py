@@ -79,8 +79,10 @@ def llm_completion(chat_prompt="", system="", temp=0.7, max_tokens=2000, remove_
         )
         model="gemini-2.0-flash"
     elif openai_key:
-        client = OpenAI( api_key=openai_key)
-        model="gpt-4o-mini"
+        client = OpenAI( 
+            api_key=openai_key,
+            base_url="https://openrouter.ai/api/v1",)
+        model="google/gemini-2.5-pro-exp-03-25:free"
     else:
         raise Exception("No OpenAI or Gemini API Key found for LLM request")
     max_retry = 5
