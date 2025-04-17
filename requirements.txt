@@ -14,7 +14,7 @@ torchaudio
 whisper-timestamped
 protobuf
 pillow
-moviepy
+moviepy==2.1.2
 progress
 questionary
 edge-tts
