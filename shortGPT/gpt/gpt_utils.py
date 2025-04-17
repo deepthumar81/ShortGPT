@@ -82,7 +82,7 @@ def llm_completion(chat_prompt="", system="", temp=0.7, max_tokens=2000, remove_
         client = OpenAI( 
             api_key=openai_key,
             base_url="https://openrouter.ai/api/v1",)
-        model="google/gemini-2.5-pro-exp-03-25:free"
+        model="nvidia/llama-3.1-nemotron-ultra-253b-v1:free"
     else:
         raise Exception("No OpenAI or Gemini API Key found for LLM request")
     max_retry = 5
