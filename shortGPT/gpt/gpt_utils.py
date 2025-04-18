@@ -81,8 +81,8 @@ def llm_completion(chat_prompt="", system="", temp=0.7, max_tokens=2000, remove_
     elif openai_key:
         client = OpenAI( 
             api_key=openai_key,
-            base_url="https://openrouter.ai/api/v1",)
-        model="deepseek/deepseek-r1:free"
+            base_url="https://api.groq.com/openai/v1",)
+        model="gemma2-9b-it"
     else:
         raise Exception("No OpenAI or Gemini API Key found for LLM request")
     max_retry = 5
